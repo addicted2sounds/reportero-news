@@ -10,6 +10,7 @@ class FetchUrlsJob < ApplicationJob
     BunnyPublisher.publish(ENV['TASKS_QUEUE'], {
       type: 'urls',
       data: {
+        subject: task.category.gsub('_', ' ').capitalize,
         email: task.email,
         urls: task.results
       }
