@@ -3,14 +3,14 @@ class FetchUrlsJob < ApplicationJob
   SONG_REGEX = %r{/music/club_music/\w+/\w+}
   queue_as :default
  
-  def perform(task_id, email)
+  def perform(task_id)
     task = Task.find task_id
     task.running!
-    task.update! results: links('top100_today')
+    task.update! results: links(task.category)
     BunnyPublisher.publish(ENV['TASKS_QUEUE'], {
       type: 'urls',
       data: {
-        email: email,
+        email: task.email,
         urls: task.results
       }
     })

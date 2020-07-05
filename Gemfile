@@ -29,6 +29,7 @@ gem 'omniauth-linkedin-oauth2'
 gem 'linkedin-v2', '~> 0.1.0'
 gem 'omniauth-facebook'
 gem 'mechanize'
+gem 'jsonb_accessor', '~> 1.0.0'
 
 group :development, :test do
   gem 'rspec-rails'

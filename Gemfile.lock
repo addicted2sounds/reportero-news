@@ -90,6 +90,10 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
+    jsonb_accessor (1.0.0)
+      activerecord (>= 5.0)
+      activesupport (>= 5.0)
+      pg (>= 0.18.1)
     jwt (2.2.1)
     linkedin-v2 (0.1.7)
       faraday (~> 0.11)
@@ -276,6 +280,7 @@ DEPENDENCIES
   byebug
   devise
   jbuilder (~> 2.7)
+  jsonb_accessor (~> 1.0.0)
   linkedin-v2 (~> 0.1.0)
   listen (~> 3.2)
   mechanize
