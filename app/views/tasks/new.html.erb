@@ -1,5 +1,5 @@
 <h1>Create new task</h1>
-<%= form_with model: @task do |form| %>
+<%= form_with model: @task, local: true do |form| %>
   <%= form.select :type, @task.class::TYPES %>
   <%= form.submit %>
 <% end %>

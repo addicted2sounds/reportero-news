@@ -1,5 +1,9 @@
 class FetchUrlsJob < ApplicationJob
-  def perform(email)
+  queue_as :default
+ 
+  def perform(task_id, email)
+    task = Task.find task_id
+    task.running!
     urls = [
       'https://google.com',
       'https://instagram.com',
@@ -11,5 +15,6 @@ class FetchUrlsJob < ApplicationJob
         urls: urls
       }
     })
+    task.completed!
   end
 end
