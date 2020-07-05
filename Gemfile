@@ -26,7 +26,9 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
 gem 'omniauth-linkedin-oauth2'
+gem 'linkedin-v2', '~> 0.1.0'
 gem 'omniauth-facebook'
+gem 'mechanize'
 
 group :development, :test do
   gem 'rspec-rails'
