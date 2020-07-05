@@ -10,14 +10,17 @@
   </head>
 
   <body>
-    <% if signed_in? %>
-      <header>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <% if signed_in? %>
         <span>
           Welcome, <%= current_user.email %>
         </span>
-        <%= link_to 'logout', destroy_user_session_path, method: :delete %>
-      </header>
-    <% end %>
-    <%= yield %>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-secondary btn-sm' %>
+
+      <% end %>
+    </nav>
+    <main class="container">
+      <%= yield %>
+    </main>  
   </body>
 </html>

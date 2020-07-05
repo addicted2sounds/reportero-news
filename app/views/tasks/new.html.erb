@@ -1,5 +1,9 @@
 <h1>Create new task</h1>
 <%= form_with model: @task, local: true do |form| %>
-  <%= form.select :type, @task.class::TYPES %>
+  <div class="form-group">
+    <%= form.label :type, 'Task type' %>
+    <%= form.select :type, @task.class::TYPES, {}, class: 'form-control' %>
+  </div>
   <%= form.submit %>
+  <%= link_to 'Task list', tasks_path %>
 <% end %>
