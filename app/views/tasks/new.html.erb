@@ -1,0 +1,25 @@
+<h1>Create new task</h1>
+<%= form_for @task.becomes(Task), url: tasks_path do |form| %>
+  <% if @task.errors.any? %>
+    <ul>
+    <% @task.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <div class="form-group">
+    <%= form.label :type, 'Task type' %>
+    <%= form.select :type, @task.class::TYPES, {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :category, 'Category' %>
+    <%= form.select :category, Tasks::FetchUrlsTask::CATEGORIES, {}, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email, 'Email for results' %>
+    <%= form.text_field :email, value: current_user.email, class: 'form-control' %>
+  </div>
+
+  <%= form.submit %>
+  <%= link_to 'Task list', tasks_path %>
+<% end %>

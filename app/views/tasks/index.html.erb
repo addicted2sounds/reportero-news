@@ -1,0 +1,28 @@
+<h1>Your tasks</h1>
+<%= link_to 'Add task', new_task_path %>
+<table class="table">
+  <thead>
+    <th>type</th>
+    <th>status</th>
+    <th>category</th>
+    <th>email</th>
+    <th>created at</th>
+  </thead>
+  <tbody>
+    <% if @tasks.empty? %>
+      <tr>
+        <td colspan="3">No tasks scheduled as of yet</td>
+      </tr>
+    <% else %>
+      <% @tasks.each do |task| %>
+        <tr>
+          <td><%= task.type %></td>
+          <td><%= task.status %></td>
+          <td><%= task.category %></td>
+          <td><%= task.email %></td>
+          <td><%= task.created_at %></td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <% if signed_in? %>
+        <span>
+          Welcome, <%= current_user.email %>
+        </span>
+        <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-secondary btn-sm' %>
+
+      <% end %>
+    </nav>
+    <main class="container">
+      <%= yield %>
+    </main>  
+  </body>
+</html>
