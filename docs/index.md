@@ -35,3 +35,9 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+
+### Presentation
+
+[Live editor](https://mermaid-js.github.io/mermaid-live-editor)
+
+https://sequencediagram.org/index.html?presentationMode=readOnly#initialData=C4S2BsFMAIBUAsQGdrOgQ2qCkBQuBBcEAY0gFoA+AIQHsAjALgGFiSBrDAOwBNoeATugDmWWtBIDI6YDExSAjgFdISYNFoCAOl2ABPAA4wwqLlngwktJQLIYpmYOOAXoUAGbBCbSAB5y5HRMgiJi0AC2tABueFy0shoxAtBBADQAItb0UBJsnE7QkDwmsgAewCx55jAAVDUA-HWoJLRm7prQdSBcagJKJKCtSE3ovJ01kKXo4QZQwzW4QVQAFADMAJSZStkwJFUFRSWTFXFc5N1qo8CjkNYo4apIIpBAA
